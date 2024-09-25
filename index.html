@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom date field</title>
+
+    <!-- font awesone link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="task-time-span-field">
+        <div class="date-field" id="from-date-field">
+            <div class="text text-size faded-color">From</div>
+            <div class="selected-date">
+                <input type="text" readonly value="16/09/2024" class="text-size" id="fromDate">
+            </div>
+            <div class="icon faded-color">
+                <i class="fa-regular fa-calendar-days text-size"></i>
+            </div>
+        </div>
+        <div class="date-field" id="to-date-field">
+            <div class="text text-size faded-color">To</div>
+            <div class="selected-date">
+                <input type="text" readonly value="19/09/2024" class="text-size" id="toDate">
+            </div>
+            <div class="icon faded-color">
+                <i class="fa-regular fa-calendar-days text-size"></i>
+            </div>
+        </div>
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="prev-year" id="prev-year">&lt;</span>
+                <div class="month-year-picker">
+                    <div class="month-picker picker">Sep</div>
+                    <div class="year-picker picker">2024</div>
+                </div>
+                <span class="next-year" id="next-year">&gt;</span>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-days">
+                    <div class="week-day">Sun</div>
+                    <div class="week-day">Mon</div>
+                    <div class="week-day">Tue</div>
+                    <div class="week-day">Web</div>
+                    <div class="week-day">Thu</div>
+                    <div class="week-day">Fri</div>
+                    <div class="week-day">Sat</div>
+                </div>
+                <div class="days">
+                    <div class="day">1</div>
+                    <div class="day">2</div>
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+
+                    <div class="day">1</div>
+                    <div class="day">2</div>
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+                </div>
+            </div>
+            <div class="month-list"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

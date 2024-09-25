@@ -1,0 +1,215 @@
+:root{
+    --bg-primary-color: #dde8ff; 
+}
+
+*{
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    padding: 20px;  
+}
+
+.task-time-span-field{
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.date-field{
+    border: 2px solid var(--bg-primary-color); 
+    border-radius: 4px; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    flex-grow: 1; 
+    padding: 3px 5px;  
+}
+
+.date-field .selected-date input{
+    outline: none; 
+    border: none; 
+    text-align: center; 
+    cursor: pointer; 
+}
+
+.text-size{
+    font-size: 1rem; 
+}
+
+.faded-color{
+    color: #9d9d9d; 
+}
+
+.calendar {
+    width: max-content; 
+    height: max-content; 
+    position: absolute; 
+    border: 2px solid var(--bg-primary-color); 
+    border-radius: 5px; 
+    display: none;  
+}
+
+/* Positioning Calendar in larger screen */
+.calendar.large {
+    top: 120%; 
+}
+
+.calendar.left-from{
+    left: 0; 
+}
+
+.calendar.right-to{
+    right: 0; 
+}
+
+/* Positioning Calendar in SMALLER DEVICE */
+.calendar.mobile{
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.calendar.mobile.from{
+    top: 50%; 
+}
+
+.calendar.mobile.to{
+    top: 120%; 
+}
+
+.task-time-span-field.show .calendar{
+    display: block; 
+}
+
+
+/* STYLE CUSTOME CALENDDAR */
+.calendar .calendar-header{
+    height: 40px; 
+    background-color: var(--bg-primary-color); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 10px; 
+    gap: 15px; 
+}
+
+.month-year-picker{
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.picker {
+    flex-grow: 1; 
+    text-align: center; 
+    background-color: #fff; 
+    padding: 3px 10px; 
+    border: 2px solid #b0b4bb; 
+    border-radius: 5px;
+    cursor: pointer;  
+}
+
+.calendar-header span {
+    font-weight: 400; 
+    font-size: 1.4rem; 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    cursor: pointer;
+    padding: 5px;  
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-header span:hover{
+    background-color: #b0b4bb;
+}
+
+.calendar .calendar-body{
+    padding: 5px; 
+}
+.calendar-week-days{
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 3px; 
+}
+
+.calendar .days{
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr); 
+    grid-row-gap: 3px; 
+    margin-top: 8px; 
+}
+
+.week-day, .day{
+    display: grid; 
+    place-items: center; 
+    cursor: pointer; 
+}
+
+.day.pressed{
+    background-color: blue;
+    border-radius: 2px;
+    padding: 2px;
+    color: white;
+}
+
+/* STYLING MONTH LIST */
+.month-list{
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: grid; 
+    grid-template-columns: repeat(4, auto);
+    gap: 5px;  
+    background-color: var(--bg-primary-color);
+    display: none;  
+}
+
+.month-list.show{
+    display: grid; 
+}
+
+.month-list .month{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.month-list .month div{
+    text-align: center; 
+    width: 100%; 
+    cursor: pointer; 
+    border-radius: 2px; 
+    padding: 1px; 
+}
+.month-list .month div:hover{
+    background-color: white; 
+}
+
+
+/* MEDAI QUERY */
+    /* SMALLER DEVICE */
+        /* CALENDER POSITION */
+@media only screen and (max-width: 555px){
+    .task-time-span-field{
+        flex-wrap: wrap; 
+
+    }
+}
+
